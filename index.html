@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK PINTAR - Portofolio Siswa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="brand">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>SMK PINTAR</span>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-links" id="nav-links">
+            <a href="#profil" class="active"><i class="fa-solid fa-user"></i> Profil</a>
+            <a href="#tentang-saya"><i class="fa-solid fa-address-card"></i> Tentang Saya</a>
+            <a href="#skill"><i class="fa-solid fa-code"></i> Skill</a>
+            <a href="#project"><i class="fa-solid fa-laptop-code"></i> Project</a>
+            <a href="#sertifikat"><i class="fa-solid fa-certificate"></i> Sertifikat</a>
+            <a href="#kontak"><i class="fa-solid fa-envelope"></i> Kontak</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="profil" class="section">
+            <div class="profile-card">
+                <div class="avatar-box">
+                    <i class="fa-solid fa-user-graduate"></i>
+                </div>
+                <h1 id="disp-nama">Rosi Tri Suryatama</h1>
+                <p class="subtitle" id="disp-jurusan">Rekayasa Perangkat Lunak (RPL)</p>
+                <span class="badge-status">Siswa Aktif</span>
+            </div>
+        </section>
+
+        <section id="tentang-saya" class="section">
+            <div class="card">
+                <h2><i class="fa-solid fa-address-card"></i> Tentang Saya</h2>
+                <p id="disp-bio">Siswa SMK PINTAR yang berfokus pada pengembangan aplikasi web dan antarmuka modern yang responsif.</p>
+                <div class="divider"></div>
+                <h3><i class="fa-solid fa-calendar-check"></i> Jadwal Kegiatan Siswa</h3>
+                <ul class="schedule-list" id="disp-jadwal">
+                    </ul>
+            </div>
+        </section>
+
+        <section id="skill" class="section">
+            <h2><i class="fa-solid fa-code"></i> Keahlian & Skill</h2>
+            <div class="grid-layout" id="disp-skills">
+                </div>
+        </section>
+
+        <section id="project" class="section">
+            <h2><i class="fa-solid fa-laptop-code"></i> Project Terbaik</h2>
+            <div class="grid-layout" id="disp-projects">
+                </div>
+        </section>
+
+        <section id="sertifikat" class="section">
+            <h2><i class="fa-solid fa-certificate"></i> Sertifikat & Penghargaan</h2>
+            <div class="grid-layout" id="disp-certificates">
+                </div>
+        </section>
+
+        <section id="kontak" class="section">
+            <div class="card">
+                <h2><i class="fa-solid fa-envelope"></i> Form Data & Kontak</h2>
+                <form id="portfolio-form" onsubmit="handleFormSubmit(event)">
+                    <div class="alert-box" id="alert-message"></div>
+
+                    <div class="form-group">
+                        <label for="input-nama">Nama Lengkap *</label>
+                        <input type="text" id="input-nama" placeholder="Masukkan nama..." required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-jurusan">Jurusan *</label>
+                        <input type="text" id="input-jurusan" placeholder="Contoh: Rekayasa Perangkat Lunak" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-email">Email Kontak *</label>
+                        <input type="email" id="input-email" placeholder="email@sekolah.sch.id" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-bio">Deskripsi Tentang Saya *</label>
+                        <textarea id="input-bio" rows="3" placeholder="Jelaskan diri Anda..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="input-jadwal">Jadwal Harian/Kegiatan * (Mencegah Jadwal Kosong)</label>
+                        <input type="text" id="input-jadwal" placeholder="Contoh: Senin - Belajar Laravel, Selasa - Praktikum" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-floppy-disk"></i> Simpan & Update Portofolio
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+  </html>
